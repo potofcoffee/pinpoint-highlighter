@@ -1,1 +1,32 @@
-/home/christoph/.local/share/mime/packages/x-pinpoint.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ Pinpoint mime type definition
+ Place this file in ~/.local/share/mime/packages
+ and run update-mime-database ~/.local/share/mime
+ (for Ubuntu, change as appropriate for your distribution)
+ 
+ Author: Christoph Fischer
+ Copyright (C) 2012 Christoph Fischer <chris@toph.de>
+
+ This is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ This file is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="text/x-pinpoint">
+    <glob pattern="*.pin"/>
+    <comment>Pinpoint presentation</comment>
+    <comment xml:lang="de">Pinpoint-Präsentation</comment>
+  </mime-type>
+</mime-info>

@@ -1,1 +1,87 @@
-/home/christoph/.local/share/gtksourceview-3.0/language-specs/pinpoint.lang
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ Pinpoint language definition for GtkSourceView (gedit, etc.)
+ Place this file in ~/.local/share/gtksourceview-3.0/language-specs/
+ (for Ubuntu, change as appropriate for your distribution)
+
+ Author: Christoph Fischer
+ Copyright (C) 2012 Christoph Fischer <chris@toph.de>
+
+ This is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ This file is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+<language id="pinpoint" _name="Pinpoint" version="2.0" _section="Scripts">
+
+<metadata>
+  <property name="mimetypes">text/x-pinpoint</property>
+  <property name="globs">*.pin</property>
+</metadata>
+
+<styles>
+      <style id="comment" _name="Comment" map-to="def:comment"/>
+      <style id="new-slide" _name="New slide" map-to="def:statement"/>
+      <style id="configuration" _name="Configuration" map-to="def:type"/>
+</styles>
+
+<definitions>
+	<context id="keywords" style-ref="def:keyword">
+		<keyword>font</keyword>
+		<keyword>duration</keyword>
+		<keyword>shading-opacity</keyword>
+		<keyword>text-align</keyword>
+		<keyword>fill</keyword>
+		<keyword>bottom-left</keyword>
+		<keyword>bottom-right</keyword>
+		<keyword>bottom</keyword>
+		<keyword>top-left</keyword>
+		<keyword>top-right</keyword>
+		<keyword>top</keyword>
+		<keyword>left</keyword>
+		<keyword>right</keyword>
+		<keyword>center</keyword>
+		<keyword>black</keyword>
+		<keyword>white</keyword>
+		<keyword>text-color</keyword>
+		<keyword>transition</keyword>
+		<keyword>no-markup</keyword>	
+	</context>
+
+    <context id="pinpoint">
+	<include>
+	    <context id="shebang" style-ref="def:shebang" end-at-line-end="true">
+	     	<start>^#\!</start>
+	    </context>
+	    <context id="comment" style-ref="comment" end-at-line-end="true">
+	     	<start>#</start>
+	    </context>
+	    <context id="configuration" style-ref="configuration">
+	    	<start>\[</start>
+	    	<end>\]</end>
+	    	<include>
+	    		<context id="configuration-bracket-open" style-ref="def:special-char">
+	    			<match>\[</match>
+	    		</context>
+	    		<context ref="keywords" />
+	    	</include>
+	    </context>
+	    <context id="new-slide" style-ref="new-slide" end-at-line-end="true">
+	    	<start>^-</start>
+	    	<include><context ref="configuration" /></include>
+	    </context>
+	</include>
+    </context>
+</definitions>
+
+</language>
