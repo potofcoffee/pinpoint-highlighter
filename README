@@ -33,6 +33,8 @@ update-mime-database ~/.local/share/mime
 2. Copy the highlighter file to the appropriate location
 cp pinpoint.lang ~/.local/share/gtksourceview-3.0/language-specs/
 
+* To users of Fedora Linux the appropriate location is /usr/share/gtksourceview-3.0/language-specs/
+
 3. Close all gedit windows 
 
 4. Open any .pin file in gedit and enjoy syntax highlighting.
