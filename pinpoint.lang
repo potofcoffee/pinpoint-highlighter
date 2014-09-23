@@ -37,11 +37,19 @@
 
 <definitions>
 	<context id="keywords" style-ref="def:keyword">
+		<keyword>stage-color</keyword>
 		<keyword>font</keyword>
+		<keyword>notes-font</keyword>
+		<keyword>notes-font-size</keyword>
 		<keyword>duration</keyword>
+		<keyword>shading-color</keyword>
 		<keyword>shading-opacity</keyword>
 		<keyword>text-align</keyword>
 		<keyword>fill</keyword>
+		<keyword>fit</keyword>
+		<keyword>stretch</keyword>
+		<keyword>unscaled</keyword>
+		<keyword>bg-position</keyword>
 		<keyword>bottom-left</keyword>
 		<keyword>bottom-right</keyword>
 		<keyword>bottom</keyword>
@@ -54,8 +62,14 @@
 		<keyword>black</keyword>
 		<keyword>white</keyword>
 		<keyword>text-color</keyword>
+		<keyword>text-align</keyword>
 		<keyword>transition</keyword>
-		<keyword>no-markup</keyword>	
+		<keyword>duration</keyword>
+		<keyword>markup</keyword>
+		<keyword>no-markup</keyword>
+		<keyword>command</keyword>
+		<keyword>camera-resolution</keyword>
+		<keyword>camera-framerate</keyword>	
 	</context>
 
     <context id="pinpoint">
